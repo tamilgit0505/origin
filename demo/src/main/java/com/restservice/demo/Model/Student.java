@@ -1,12 +1,23 @@
 package com.restservice.demo.Model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name="Student_info")
 public class Student {
 	
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	int studId;
 	String studentName;
 	String studentDOB;
 	String studentAddr;
 	String studentBloodType;
+	String studentEmail;
 	
 	public Student() {
 		super();
